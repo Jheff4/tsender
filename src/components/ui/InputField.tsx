@@ -5,9 +5,10 @@ export interface InputFieldProps {
   type?: string
   large?: boolean
   onChange?: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void
+  disabled?: boolean
 }
 
-export function InputField({ label, placeholder, value, type, large, onChange }: InputFieldProps) {
+export function InputField({ label, placeholder, value, type, large, onChange, disabled }: InputFieldProps) {
   return (
     <div className="flex flex-col gap-1.5">
       <label className="text-zinc-600 font-medium text-sm">{label}</label>
@@ -17,6 +18,7 @@ export function InputField({ label, placeholder, value, type, large, onChange }:
           placeholder={placeholder}
           value={value || ''}
           onChange={onChange}
+          disabled={disabled}
         />
       ) : (
         <input
@@ -25,6 +27,7 @@ export function InputField({ label, placeholder, value, type, large, onChange }:
           placeholder={placeholder}
           value={value || ''}
           onChange={onChange}
+          disabled={disabled}
         />
       )}
     </div>
