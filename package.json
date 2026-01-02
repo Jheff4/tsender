@@ -7,7 +7,8 @@
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
-    "test:unit": "vitest"
+    "test:unit": "vitest",
+    "synpress": "METAMASK_VERSION=13.8.0 synpress"
   },
   "dependencies": {
     "@rainbow-me/rainbowkit": "^2.2.8",
@@ -27,6 +28,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "cross-env": "^10.1.0",
     "jsdom": "^27.3.0",
     "tailwindcss": "^4",
     "typescript": "^5",

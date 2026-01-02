@@ -34,10 +34,14 @@ export default defineConfig({
       name: 'chromium',
       use: {
         ...devices['Desktop Chrome'],
-        channel: 'chrome', // IMPORTANT
+        launchOptions: {
+          executablePath: "/Applications/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing",
+        },
       },
     },
   ],
+
+
 
   /* Run your local dev server before starting the tests */
   webServer: {
